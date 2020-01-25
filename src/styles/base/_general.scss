@@ -1,0 +1,27 @@
+
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+li,
+article,
+section,
+aside,
+header,
+footer {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    
+}
