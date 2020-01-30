@@ -27,8 +27,10 @@
     font-weight: 500;
     font-style: normal;
 }
-
-$font-thin:'Roboto-Thin';
-$font-regular:'Roboto-Regular';
-$font-bold:'Roboto-Bold';
-$font-medium:'Roboto-Medium';
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('../../fonts/ArialNarrow.woff2') format('woff2'),
+        url('../../fonts/ArialNarrow.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

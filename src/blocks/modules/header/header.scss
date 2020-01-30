@@ -1,10 +1,10 @@
 .header {
-    background: url('../../../img/Bg1.png') #013056 center center no-repeat;
+    background: url(../../../img/Bg1.png) $primary-1 center center no-repeat;
     text-align: center;
 }
 
 .sprite {
-    background-image: url('../../../img/sprite/css_sprites.png');
+    background-image: url(../../../img/sprite/css_sprites.png);
     display: inline-block;
 
 }
@@ -23,22 +23,22 @@
 
 .menu p,
 .header p {
-    color: #caddea;
+    color: $primary-4;
     font-size: 18px;
-    font-family: 'Roboto-Regular';
+    font-family: $font-regular;
 
 }
 
 .menu p>span,
 .header p>span {
-    font-family: 'Roboto-Thin';
+    font-family: $font-thin;
 
 }
 
 .menu a,
 .header a {
-    color: #ffffff;
-    font-family: 'Roboto-Regular';
+    color: $base-light;
+    font-family: $font-regular;
     font-size: 18px;
     line-height: 24px;
     text-transform: uppercase;
@@ -63,7 +63,7 @@
 .burger {
     width: 65px;
     height: 5px;
-    background-color: #fff;
+    background-color: $base-light;
     display: block;
     position: relative;
     margin-bottom: 0;
@@ -74,7 +74,7 @@
     content: '';
     width: 65px;
     height: 5px;
-    background-color: #fff;
+    background-color: $base-light;
     display: block;
     position: absolute;
     top: -15px;
@@ -106,8 +106,6 @@
         padding: 0;
 
     }
-
-
 }
 
 @media(max-width:768px) {
@@ -126,10 +124,10 @@
 
 header .menu ul li>span,
 header .menu ul li a {
-    color: #ffffff;
+    color: $base-light;
     font-size: 18px;
     line-height: 42px;
-    font-family: 'Roboto-Regular';
+    font-family: $font-regular;
     text-transform: uppercase;
 
 }
@@ -142,7 +140,7 @@ header .menu ul li>span {
 }
 
 header .menu {
-    background-color: #1b7fd0;
+    background-color: $primary-3;
 }
 
 header .menu ul {
@@ -163,8 +161,8 @@ header .menu ul li {
 }
 
 header .menu ul li a:hover {
-    color: #1b7fd0;
-    background-color: #caddea;
+    color: $primary-3;
+    background-color: $primary-4;
 
 
 }
@@ -194,7 +192,7 @@ header .menu ul a:hover span {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background-color: #1b7fd0;
+    background-color: $primary-3;
     left:-500px;
     top:30px;
     padding: 40px 0 15px 0;
@@ -208,7 +206,7 @@ header .menu ul a:hover span {
     display: flex;
     flex-direction: column;
     position: absolute;
-    background: url(../img/bg-header.png) #013056 center center no-repeat;
+    background: url(../img/bg-header.png) $primary-1 center center no-repeat;
     padding: 40px 0 15px 0;
     border-radius: 0 0 10px 10px;
     top: -700px;
