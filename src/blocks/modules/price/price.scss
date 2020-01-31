@@ -1,93 +1,293 @@
-.price{
-    background: url(../../../img/Bg1.png) $primary-2 center center;
-    .container{
-        padding: 20px 0;
+.price {
+    background: url(../../../img/bg-price.png) $primary-2 center center;
+
+    .container {
+        padding: 20px 0 10px 0;
     }
-    .triangle-container{
-        filter: drop-shadow(3px 3px 3px lighten($base-dark,20%));
+
+    .triangle-container {
+        filter: drop-shadow(3px 3px 3px lighten($base-dark, 20%));
+
         div:first-of-type {
-        line-height: 36px;
-        text-transform: uppercase;
-        @include font ($primary-3,$font-bold,25px,700);
-        background-color: $primary-4;
-        text-align: end;
-        padding: 0 15px;
-        div{
-            i{
-                width: 22px; height: 49px;
-                background-position: -10px -235px;
-                margin-right: 10px;
-            
-            }
-            line-height: 20px;
+            line-height: 36px;
             text-transform: uppercase;
-            @include font ($primary-2,$font-regular,22px,400);
+            @include font ($primary-3, $font-bold, 25px, 700);
+            background-color: $primary-4;
+            text-align: end;
+            padding: 0 15px;
 
-           span{
-            text-transform: uppercase;
-            letter-spacing: -2.42px;
-            @include font ($order-color,$font-bold,50px,700);
-            span{
-                @include font ($order-color,$font-regular,35px,400);
+            @media(max-width:991px) {
+                @include font ($primary-3, $font-bold, 18px, 700);
+            }
+
+            @media(max-width:767px) {
+                @include font ($primary-3, $font-bold, 16px, 700);
+                line-height: 45px;
+            }
+
+            div {
+                i {
+                    width: 22px;
+                    height: 49px;
+                    background-position: -10px -235px;
+                    margin-right: 10px;
+
+                    @media(max-width:991px) {
+                        width: 35px;
+                    }
+                }
+
+                line-height: 20px;
+                text-transform: uppercase;
+                @include font ($primary-2, $font-regular, 22px, 400);
+
+                @media(max-width:991px) {
+                    @include font ($primary-2, $font-regular, 16px, 400);
+
+                }
+
+                span {
+                    text-transform: uppercase;
+                    letter-spacing: -2.42px;
+                    @include font ($order-color, $font-bold, 50px, 700);
+
+                    @media(max-width:991px) {
+                        @include font ($order-color, $font-bold, 44px, 700);
+                    }
+
+                    span {
+                        @include font ($order-color, $font-regular, 35px, 400);
+
+                        @media(max-width:991px) {
+                            @include font ($order-color, $font-regular, 30px, 400);
+
+                        }
+                    }
+                }
+            }
+
+            h2 {
+                text-align: start;
 
             }
-           } 
-            }
-        h2{
-            text-align: start;
         }
-        }
-        .triangle{
-            width: 0; 
+
+        .triangle {
+            width: 0;
             height: 0;
             border-top: 15px solid $primary-4;
             border-right: 20px solid transparent;
-           
+
         }
     }
-    h5{
-        @include font ($base-light,$font-regular,16px,400);
+
+    h5 {
+        @include font ($base-light, $font-regular, 16px, 400);
         line-height: 24.9px;
         text-transform: uppercase;
         margin: 15px 0 10px 0;
         letter-spacing: 1.5px;
+
+        @media(max-width:991px) {
+            @include font ($base-light, $font-regular, 13px, 400);
+        }
+
     }
-    select{
+
+    select {
         background-color: $select-bg;
         outline: none;
         margin-bottom: 20px;
         height: 36px;
-        border-radius:inherit;
-
+        border-radius: inherit;
+        flex-basis: auto;
+        position: relative;
+        appearance: none;
+        -webkit-appearance: none;
+        @media(max-width:767px) {
+            margin-bottom: 0;
+        }
     }
-    .total-price{
-        span{
+
+    .total-price {
+        h5 {
+            white-space: nowrap;
+
+        }
+
+        padding:0 15px 12px 15px;
+
+        span {
             line-height: 44.72px;
             text-transform: uppercase;
-            @include font ($base-light,$font-regular,48px,400);
+            @include font ($base-light, $font-regular, 48px, 400);
 
+            @media(max-width:991px) {
+                @include font ($base-light, $font-regular, 30px, 400);
+            }
         }
-        span:last-of-type{
-            @include font ($base-light,$font-regular,27px,400);
 
+        span:last-of-type {
+            @include font ($base-light, $font-regular, 27px, 400);
+
+            @media(max-width:991px) {
+                @include font ($base-light, $font-regular, 22px, 400);
+
+            }
         }
     }
-    .triangle-order{
-        a{
+
+    .triangle-order {
+        a {
             display: block;
             text-transform: uppercase;
-            @include font ($base-light,$font-regular,26px,400);
+            @include font ($base-light, $font-regular, 26px, 400);
             background-color: $order-color;
             padding: 10px 0;
             text-align: center;
 
+            @media(max-width:991px) {
+                @include font ($base-light, $font-regular, 20px, 400);
+            }
+
         }
-        .triangle{
-            width: 0; 
+
+        .triangle {
+            width: 0;
             height: 0;
             border-top: 15px solid $order-color;
             border-right: 25px solid transparent;
         }
     }
 
+    .row:nth-of-type(2) {
+        div:last-of-type h5 {
+            padding-left: 31px;
+
+            @media(max-width:767px) {
+                padding-left: 0;
+            }
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// i:before,
+// i:after {
+// content: "";
+// display: block;
+// position: absolute;
+// background-color: $base-dark;
+// width: 12px;
+// height: 32px;
+// z-index: 100;
+
+// }
+
+// select:before {
+// transform: translate(-3px, 0) rotate(45deg);
+// }
+
+// select:after {
+// transform: translate(3px, 0) rotate(-45deg);
+// }
+
+// select:before,
+// select:after {
+// transition: all 1s ease-in-out;
+// }
+
+// #baner-1:checked~label i::before,
+// #baner-2:checked~label i::before,
+// #baner-3:checked~label i::before {
+// transform: translate(-3px, 0) rotate(-45deg);
+// background-color: #95e1d3;
+
+// }
+
+// #baner-1:checked~label i::after,
+// #baner-2:checked~label i::after,
+// #baner-3:checked~label i::after {
+// transform: translate(3px, 0) rotate(45deg);
+// background-color: #95e1d3;
+
+// }
+// // Up
+// .ui-button{
+// background: none;
+// margin: 0;
+// border: none;
+// padding: 0;
+// height: 40px;
+// line-height: 40px;
+// text-indent: 15px;
+// border: 1px solid #43BD85;
+// &:hover, 
+// &:focus{
+//     background: none;
+//     outline: none;
+//     color: #000;
+//     border: 1px solid #43BD85;
+//     .ui-icon{
+//         background-image: none;
+//     }
+// }
+// }
+// // Arrow
+// .ui-selectmenu-icon.ui-icon{
+// width: 0;
+// height: 0;
+// background-image: none;
+// border-top: 10px solid #37465F;
+// border-left: 8px solid transparent;
+// border-right: 8px solid transparent;
+// position: relative;
+// top: 50%;
+// transform: translateY(-50%);
+// right: 15px;
+// &:hover{
+//     background-image: none;
+// }
+// }
+// //ACTIVE arrow
+// .ui-selectmenu-button-open{
+// .ui-selectmenu-icon.ui-icon{
+//     border: none;
+//     border-bottom: 10px solid #37465F;
+//     border-left: 8px solid transparent;
+//     border-right: 8px solid transparent;
+// }
+// }
+// // Dropdown
+// .ui-widget.ui-widget-content{
+// border: 1px solid #43BD85;
+// padding: 0;
+// }
+// // Dropdown  item
+// .ui-menu .ui-menu-item> div{
+// padding: 0;
+// background: none;
+// margin: 0;
+// border: none;
+// padding: 0;
+// height: 40px;
+// line-height: 40px;
+// text-indent: 10px;
+// }
+// // Dropdown item hover
+// .ui-widget-content .ui-state-active{
+// background-color: #37465F;
+// border: none;
+// margin: 0;
+// }
