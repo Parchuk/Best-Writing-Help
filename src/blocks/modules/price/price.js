@@ -1,4 +1,4 @@
-
+console.log(2);
 $.widget( 'app.selectmenu', $.ui.selectmenu, {
   _drawButton: function() {
     this._super();
