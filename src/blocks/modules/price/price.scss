@@ -1,0 +1,93 @@
+.price{
+    background: url(../../../img/Bg1.png) $primary-2 center center;
+    .container{
+        padding: 20px 0;
+    }
+    .triangle-container{
+        filter: drop-shadow(3px 3px 3px lighten($base-dark,20%));
+        div:first-of-type {
+        line-height: 36px;
+        text-transform: uppercase;
+        @include font ($primary-3,$font-bold,25px,700);
+        background-color: $primary-4;
+        text-align: end;
+        padding: 0 15px;
+        div{
+            i{
+                width: 22px; height: 49px;
+                background-position: -10px -235px;
+                margin-right: 10px;
+            
+            }
+            line-height: 20px;
+            text-transform: uppercase;
+            @include font ($primary-2,$font-regular,22px,400);
+
+           span{
+            text-transform: uppercase;
+            letter-spacing: -2.42px;
+            @include font ($order-color,$font-bold,50px,700);
+            span{
+                @include font ($order-color,$font-regular,35px,400);
+
+            }
+           } 
+            }
+        h2{
+            text-align: start;
+        }
+        }
+        .triangle{
+            width: 0; 
+            height: 0;
+            border-top: 15px solid $primary-4;
+            border-right: 20px solid transparent;
+           
+        }
+    }
+    h5{
+        @include font ($base-light,$font-regular,16px,400);
+        line-height: 24.9px;
+        text-transform: uppercase;
+        margin: 15px 0 10px 0;
+        letter-spacing: 1.5px;
+    }
+    select{
+        background-color: $select-bg;
+        outline: none;
+        margin-bottom: 20px;
+        height: 36px;
+        border-radius:inherit;
+
+    }
+    .total-price{
+        span{
+            line-height: 44.72px;
+            text-transform: uppercase;
+            @include font ($base-light,$font-regular,48px,400);
+
+        }
+        span:last-of-type{
+            @include font ($base-light,$font-regular,27px,400);
+
+        }
+    }
+    .triangle-order{
+        a{
+            display: block;
+            text-transform: uppercase;
+            @include font ($base-light,$font-regular,26px,400);
+            background-color: $order-color;
+            padding: 10px 0;
+            text-align: center;
+
+        }
+        .triangle{
+            width: 0; 
+            height: 0;
+            border-top: 15px solid $order-color;
+            border-right: 25px solid transparent;
+        }
+    }
+
+}
