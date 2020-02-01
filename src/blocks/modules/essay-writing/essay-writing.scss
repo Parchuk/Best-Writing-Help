@@ -13,10 +13,6 @@
         @include font ($primary-3,$font-bold,28px,700);
         background-color: $primary-4;
         padding: 8px 20px;
-
-        @media(max-width:767px) {
-            @include font ($primary-3, $font-bold, 20px, 700);
-        }
        }
     }
     .triangle-container+p{
@@ -25,35 +21,84 @@
         margin-bottom: 35px;
     }
     ul{
+        position: relative;
         margin-bottom: 40px;
         li>span>span{
             background-image: url(../../../img/sprite/css_sprites.png);
             display: block;
         }
-        li:first-of-type>span>span{
+        li:first-of-type>label>span{
             width: 79px; height: 61px;
-            background-position: -460px;        
+            background-position: -10px -460px;               
         
         }
-        li>span{
+        li:nth-of-type(2)>label>span{
+            background-position: -10px -956px; 
+            width: 73px; height: 66px;                    
+        
+        }
+        li:nth-of-type(2)>label>span{
+            background-position: -6px -956px; 
+            width: 73px; height: 66px;                    
+        
+        }
+        li:nth-of-type(3)>label>span{
+            background-position: -10px -622px; 
+            width: 61px; height: 63px;                    
+        
+        }
+        li:nth-of-type(4)>label>span{
+            background-position: -10px -304px; 
+            width: 44px; height: 58px;
+        }
+        li:nth-of-type(1):hover >label>span{
+            background-position:-10px -541px;
+        }
+        li:nth-of-type(2):hover >label>span{
+            background-position:-10px -1042px;
+        }
+        li:nth-of-type(3):hover >label>span{
+            background-position:-10px -705px;
+        }        
+        li:nth-of-type(4):hover >label>span{
+            background-position:-10px -382px;
+        }
+        li>label{
             width: 110px;
             height: 110px;
             background-color:$primary-4;
             display: block;
             border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .3s ease-in-out;
+            @media(max-width:530px){
+                transform: scale(.6);
+            }
+        }
+        li:hover >label{
+            background-color: $primary-2;
         }
         li{
-            position: relative;
             padding-top: 15px;
             box-sizing: border-box;
             justify-content: space-between;
             display: flex;
             flex-direction: column;
             align-items: center;
-            &:hover{
-                background-color: $base-light;
-                filter: drop-shadow(0px 0px 2px lighten($base-dark, 20%));
-
+            transition: .3s ease-in-out;
+            @media(max-width:991px) {
+                margin-bottom: 30px;
+            }
+            @media(min-width:768px){
+                li{
+                    position: relative;
+                }
+                &:hover{
+                    background-color: $base-light;
+                    filter: drop-shadow(0px 0px 2px lighten($base-dark, 20%));
+                }
             }
             
         }
@@ -83,11 +128,11 @@
             text-transform: uppercase;
             padding: 8px 12px;
             margin:20px 0 15px 0;
+            transition: .3s ease-in-out;
             &:hover{
                 background-color: $a-bg;
             }
-
-
+             
         }
     }
     h4{
@@ -109,10 +154,15 @@
             position: absolute;
             bottom: -28px;
             left:0;
+            transition: .3s ease-in-out;
+
     }
-    li:hover::after{
-        border-top: 28px solid $base-light;
+    @media(min-width:768px){
+        li:hover::after{
+            border-top: 28px solid $base-light;
+        }
     }
+    
     .triangle {
         width: 0;
         height: 0;
@@ -120,4 +170,77 @@
         border-right: 20px solid transparent;
 
     }
+    li:nth-of-type(2) .drop-down-mb{
+        width: 480%;
+        margin-left: -130px;
+        &::before{
+        left:164px;
+        }
+        @media(max-width:530px){
+            width: 650%;
+            margin-left: -100px;
+            &::before{
+            left:164px;
+        }
+        }
+    }
+    li:nth-of-type(3) .drop-down-mb{
+        width: 480%;
+        margin-left: -260px;
+        p{
+          align-self: flex-start;;
+        }
+        &::before{
+        left:292px;
+        }
+    }
+    li:nth-of-type(4) .drop-down-mb{
+        width: 480%;
+        margin-left: -395px;
+        &::before{
+        left:422px;
+        }
+    }
+    .drop-down-mb{
+        background-color: $base-light;
+        position: relative;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        width: 480%;
+        margin: 25px auto;
+        padding: 20px;
+        &::before{
+            content: "";
+            display: block;
+            border-left: 23px solid transparent;
+            border-right: 23px solid transparent;
+            border-bottom: 25px solid $base-light;
+            position: absolute;
+            top:-20px;
+            left:33px;
+            transition: .3s ease-in-out;
+    }
+    @media(max-width:530px){
+            margin: 10px auto;
+            padding:15px;
+    }
+    }
+    @media(max-width:767px) {
+        label~h4,
+        label~p,
+        label~a{
+            display: none;
+            background-color: #f4f6fa;
+        }
+        #radio-1:checked~.drop-down-mb,
+        #radio-2:checked~.drop-down-mb,
+        #radio-3:checked~.drop-down-mb,
+        #radio-4:checked~.drop-down-mb{
+            display: flex;
+        }
+     }
+       
+       
 }
