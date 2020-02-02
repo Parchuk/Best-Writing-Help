@@ -1,0 +1,45 @@
+.order{
+    background: url(../../../img/bg-order.png) $primary-6 center 45px no-repeat;
+    .triangle-container {
+        filter: drop-shadow(3px 3px 3px lighten($base-dark, 20%));
+        margin: 35px 0 10px 0;
+
+        @media(max-width:767px) {
+            margin: 23px 0;
+        }
+
+        @media(max-width:575px) {
+            margin: 20px 0 5px 0;
+
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            @include font ($primary-3, $font-bold, 28px, 700);
+            background-color: $primary-4;
+            padding: 8px 20px;
+
+            @media(max-width:575px) {
+                @include font ($primary-3, $font-bold, 22px, 700);
+            }
+        }
+    }
+    .triangle-container-order{
+        margin: 50px 0;
+        a{
+            padding: 10px 95px;
+            display: block;
+            background-color:$order-color;
+            text-transform: uppercase;
+            @include font ($base-light, $font-regular, 26px,400);
+
+        }
+        .triangle-order{
+            width: 0;
+            height: 0;
+            border-top: 15px solid $order-color;
+            border-right: 25px solid transparent;
+        }
+    }
+}
