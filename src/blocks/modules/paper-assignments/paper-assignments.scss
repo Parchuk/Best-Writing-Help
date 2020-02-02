@@ -1,0 +1,74 @@
+.paper-assignments {
+    background: url(../../../img/paper-assignments-bg.png) $primary-3 center no-repeat;
+    padding-bottom: 40px;
+
+    @media(max-width:575px) {
+        padding-bottom: 10px;
+    }
+
+    .triangle-container {
+        filter: drop-shadow(3px 3px 3px lighten($base-dark, 20%));
+        margin: 35px 0 10px 0;
+
+        @media(max-width:767px) {
+            margin: 23px 0;
+        }
+
+        @media(max-width:575px) {
+            margin: 20px 0 5px 0;
+
+        }
+
+        h2 {
+            text-align: center;
+            text-transform: uppercase;
+            @include font ($primary-3, $font-bold, 28px, 700);
+            background-color: $primary-4;
+            padding: 8px 20px;
+
+            @media(max-width:575px) {
+                @include font ($primary-3, $font-bold, 22px, 700);
+            }
+        }
+    }
+
+    ul {
+        box-sizing: border-box;
+    }
+
+    .row>p {
+        padding-bottom: 40px;
+
+        @media(max-width:575px) {
+            padding: 10px 45px;
+            text-align: center;
+        }
+    }
+
+    p {
+        margin: 0 auto;
+        @include font($base-light, $font-normal, 19px, 400)
+    }
+
+    li span {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: $base-light;
+        display: block;
+        text-align: center;
+        @include font ($primary-3, $font-bold, 25px, 700);
+        margin-bottom: 20px;
+    }
+
+    span+p {
+        border-bottom: 2px solid $base-light;
+        padding-bottom: 15px;
+    }
+
+    @media(max-width:575px) {
+        span+p {
+            margin-bottom: 20px;
+        }
+    }
+}

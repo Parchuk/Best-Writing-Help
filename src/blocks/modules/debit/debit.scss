@@ -1,0 +1,31 @@
+.debit {
+    background-color: $primary-4;
+    padding: 15px 0;
+
+    .container-img {
+        font-size: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    a {
+        color: $primary-3;
+        font-size: 40px;
+        padding: 0 25px;
+
+        @media (max-width:991px) {
+            font-size: 27px;
+        }
+
+        &:hover {
+            color: #013056;
+        }
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+    }
+}

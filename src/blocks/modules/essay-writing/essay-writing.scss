@@ -10,6 +10,7 @@
         }
 
         h2 {
+            text-align: center;
             text-transform: uppercase;
             @include font ($primary-3, $font-bold, 28px, 700);
             background-color: $primary-4;
