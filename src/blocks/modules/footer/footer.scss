@@ -97,8 +97,16 @@ footer {
 
         }
     }
-    .container-footer .row:first-of-type{
-       max-width:1170px;
-       margin: 0 auto;
+
+    .container-footer .row:first-of-type {
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    @media (max-width:991px) {
+        .footer-content>li {
+            width: 20%;
+        }
     }
 }
+

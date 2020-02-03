@@ -1,5 +1,6 @@
-.order{
+.order {
     background: url(../../../img/bg-order.png) $primary-6 center 480px no-repeat;
+
     .triangle-container {
         filter: drop-shadow(3px 3px 3px lighten($base-dark, 20%));
         margin: 35px 0 10px 0;
@@ -25,114 +26,151 @@
             }
         }
     }
-    .triangle-container-order{
-        margin: 50px 0;
-        a{
-            padding: 10px 95px;
+
+    .triangle-container-order {
+        margin: 50px auto;
+        flex-direction: column;
+
+        a {
+            text-align: center;
+            padding: 10px 0;
             display: block;
-            background-color:$order-color;
+            background-color: $order-color;
             text-transform: uppercase;
-            @include font ($base-light, $font-regular, 26px,400);
+            @include font ($base-light, $font-regular, 26px, 400);
+            align-self: center;
+
+            @media(max-width:372px) {
+                @include font ($base-light, $font-regular, 24px, 400);
+
+            }
 
         }
-        .triangle-order{
+
+        .triangle-order {
             width: 0;
             height: 0;
             border-top: 15px solid $order-color;
             border-right: 25px solid transparent;
         }
     }
-    .trigger{
-        @media(min-width:768px){
+
+    .trigger {
+        @media(min-width:768px) {
             display: flex;
         }
 
-        label span{
+        label span {
             padding-right: 20px;
             line-height: 51.82px;
             text-transform: uppercase;
-            @include font ($primary-4,$font-Rajdhani, 50px,700);
+            @include font ($primary-4, $font-Rajdhani, 50px, 700);
 
         }
-        h4,h3{
-            @media(max-width:426px){
-                @include font ($primary-3,$font-regular,16px,500);
+
+        h4,
+        h3 {
+            @media(max-width:426px) {
+                @include font ($primary-3, $font-regular, 16px, 500);
 
             }
+
             line-height: 22px;
             text-transform: uppercase;
-            @include font ($primary-3,$font-regular,18px,500);
+            @include font ($primary-3, $font-regular, 18px, 500);
         }
-        .content >span{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: $primary-4;
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                &.sprite{
-                    background-image: url(../../../img/sprite/css_sprites.png);
-                    display: block;
-                }
+
+        .content>span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: $primary-4;
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+
+            &.sprite {
+                background-image: url(../../../img/sprite/css_sprites.png);
+                display: block;
+            }
         }
     }
-    .trigger:nth-of-type(1) .sprite{
-        width: 76px; height: 76px;
+
+    .trigger:nth-of-type(1) .sprite {
+        width: 76px;
+        height: 76px;
         background-position: -10px -1128px;
         margin: 10px 10px 0 0;
     }
-    .trigger:nth-of-type(2) .sprite{
-        width: 77px; height: 71px;
+
+    .trigger:nth-of-type(2) .sprite {
+        width: 77px;
+        height: 71px;
         background-position: -10px -1662px;
     }
-    .trigger:nth-of-type(3) .sprite{
-        width: 77px; height: 45px;
+
+    .trigger:nth-of-type(3) .sprite {
+        width: 77px;
+        height: 45px;
         background-position: -10px -105px;
     }
-    .trigger:nth-of-type(4) .sprite{
-        width: 70px; height: 64px;
+
+    .trigger:nth-of-type(4) .sprite {
+        width: 70px;
+        height: 64px;
         background-position: -10px -788px;
     }
-    .trigger:nth-of-type(5) .sprite{
-        width: 61px; height: 70px;
+
+    .trigger:nth-of-type(5) .sprite {
+        width: 61px;
+        height: 70px;
         background-position: -10px -1302px;
     }
-    .trigger:nth-of-type(6) .sprite{
-        width: 68px; height: 70px;
+
+    .trigger:nth-of-type(6) .sprite {
+        width: 68px;
+        height: 70px;
         background-position: -10px -1482px;
     }
-    .content{
-        span{
+
+    .content {
+        span {
             margin: 0 auto;
         }
-        @media(max-width:991px){
-            padding: 15px 20px;
+
+        @media(max-width:991px) {
+            padding: 25px 20px;
         }
+
         padding: 15px 55px;
-        p:first-of-type{
+
+        p:first-of-type {
             text-align: center;
             padding: 10px 0;
-            @include font($primary-5,$font-normal,18px,400)
+            @include font($primary-5, $font-normal, 18px, 400)
+        }
 
+        p:last-of-type {
+            @include font($base-dark, $font-normal, 18px, 400)
         }
-        p:last-of-type{
-            @include font($base-dark,$font-normal,18px,400)
-        }
-        @media(min-width:768px){
+
+        @media(min-width:768px) {
             position: absolute;
         }
+
         display: none;
         z-index: 1;
         right: 0;
         top: 0;
         bottom: 0;
-    }   
-    label{
-        @media(max-width:426px){
+    }
+
+    label {
+        @media(max-width:426px) {
             max-height: 150px;
             padding: 50px 10px;
         }
+
         cursor: pointer;
         // position: relative;
         display: flex;
@@ -141,60 +179,98 @@
         height: 73px;
         border-bottom: solid 2px $primary-4;
         z-index: 3;
-        &::after{
-            content: "";
-            position: absolute;
-            display: block;
-            width: 0;
-            height: 0;
-            border-top: 35px solid transparent;
-            border-left: 50px solid $primary-2;
-            border-bottom: 36px solid transparent;
-            right:-50px;
-            z-index: 2;
-            opacity:0;
+
+        @media(max-width:768px) {
+            &::before {
+                width: 0;
+                height: 0;
+                border-left: 30px solid transparent;
+                border-right: 30px solid transparent;
+                border-top: 20px solid $primary-2;
+                content: "";
+                position: absolute;
+                display: block;
+                left: 40%;
+                bottom: -15%;
+                opacity: 0;
+            }
+
+            @media(min-width:425px) {
+                &::before {
+                    left: 44%;
+                    bottom: -20%;
+                }
+            }
+        }
+
+        @media(min-width:768px) {
+            &::after {
+                content: "";
+                position: absolute;
+                display: block;
+                width: 0;
+                height: 0;
+                border-top: 35px solid transparent;
+                border-left: 50px solid $primary-2;
+                border-bottom: 36px solid transparent;
+                right: -50px;
+                z-index: 2;
+                opacity: 0;
+            }
         }
     }
+
     #radio-11:checked~.content,
     #radio-12:checked~.content,
     #radio-13:checked~.content,
     #radio-14:checked~.content,
     #radio-15:checked~.content,
-    #radio-16:checked~.content{
-        display:block   ;
+    #radio-16:checked~.content {
+        display: block;
         height: 437px;
         filter: drop-shadow(0px 0px 2px lighten($base-dark, 20%));
         background-color: $base-light;
     }
+
+    #radio-11:checked~label::before,
+    #radio-12:checked~label::before,
+    #radio-13:checked~label::before,
+    #radio-14:checked~label::before,
+    #radio-15:checked~label::before,
+    #radio-16:checked~label::before,
     #radio-11:checked~label::after,
     #radio-12:checked~label::after,
     #radio-13:checked~label::after,
     #radio-14:checked~label::after,
     #radio-15:checked~label::after,
-    #radio-16:checked~label::after{
+    #radio-16:checked~label::after {
         opacity: 1;
     }
-    input{
+
+    input {
         display: none;
     }
-    .row:nth-of-type(2){
+
+    .row:nth-of-type(2) {
         position: relative;
     }
+
     #radio-11:checked~label,
     #radio-12:checked~label,
     #radio-13:checked~label,
     #radio-14:checked~label,
     #radio-15:checked~label,
-    #radio-16:checked~label{
+    #radio-16:checked~label {
         background-color: $primary-2;
         color: $base-light;
     }
+
     #radio-11:checked~label h4,
     #radio-12:checked~label h4,
     #radio-13:checked~label h4,
     #radio-14:checked~label h4,
     #radio-15:checked~label h4,
-    #radio-16:checked~label h3{
+    #radio-16:checked~label h3 {
         color: $base-light;
     }
 }
