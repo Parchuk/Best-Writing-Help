@@ -1,0 +1,265 @@
+.header-orders-list {
+    background: url(../../../img/Bg1.png) $primary-1 center center no-repeat;
+    text-align: center;
+}
+
+.sprite {
+    background-image: url(../../../img/sprite/css_sprites.png);
+    display: inline-block;
+
+}
+
+.login {
+    width: 41px;
+    height: 25px;
+    background-position: -10px -10px;
+}
+
+.chat {
+    width: 51px;
+    height: 30px;
+    background-position: -10px -55px;
+}
+
+.menu p,
+.header-orders-list p {
+    color: $primary-4;
+    font-size: 18px;
+    font-family: $font-regular;
+
+}
+
+.menu p>span,
+.header-orders-list p>span {
+    font-family: $font-thin;
+
+}
+
+.menu a,
+.header-orders-list a {
+    color: $base-light;
+    font-family: $font-regular;
+    font-size: 18px;
+    line-height: 24px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+
+.header-orders-list a:first-of-type {
+    letter-spacing: 1.1px;
+}
+
+.menu a>span,
+.header-orders-list a>span {
+    margin-left: 10px;
+}
+
+.header-orders-list .row {
+    align-items: center;
+    padding: 10px 0;
+}
+
+.burger {
+    width: 65px;
+    height: 5px;
+    background-color: $base-light;
+    display: block;
+    position: relative;
+    margin-bottom: 0;
+}
+
+.burger::after,
+.burger::before {
+    content: '';
+    width: 65px;
+    height: 5px;
+    background-color: $base-light;
+    display: block;
+    position: absolute;
+    top: -15px;
+}
+
+.burger::after {
+    top: 15px;
+}
+
+@media (max-width:1024px) {
+
+    .header-container .container-fluid:first-of-type {
+        padding: 0;
+    }
+
+    .chat-padding {
+        padding: 0; 
+    }
+}
+
+@media(max-width:1200px) {
+    .chat {
+        background-position: -10px -55px;
+        background-size: 10;
+
+    }
+
+    .chat-padding {
+        padding: 0;
+
+    }
+}
+
+@media(max-width:768px) {
+    .header-container .container-fluid:first-of-type {
+        padding-right: 0;
+
+    }
+}
+
+
+@media(max-width:992px) {
+    .header-orders-list .row>div:nth-of-type(2) p {
+        text-align: left;
+    }
+}
+
+.header-container .menu ul li>span,
+.header-container .menu ul li a {
+    color: $base-light;
+    font-size: 18px;
+    line-height: 42px;
+    font-family: $font-regular;
+    text-transform: uppercase;
+
+}
+
+.header-container .menu ul li>span {
+    position: absolute;
+    right: -3px;
+    top: 0;
+
+}
+
+.header-container .menu {
+    background-color: $primary-3;
+}
+
+.header-container .menu ul {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.header-container .menu ul a {
+    text-align: center;
+    display: block;
+}
+
+.header-container .menu ul li {
+    flex-grow: 1;
+    position: relative;
+    text-align: center;
+}
+
+.header-container .menu ul li a:hover {
+    color: $primary-3;
+    background-color: $primary-4;
+
+
+}
+
+.header-container .menu ul li a:hover~span {
+    display: none;
+}
+
+.header-container .menu ul a:hover span {
+    display: none;
+
+}
+
+.menu .row:nth-of-type(2) {
+    padding: 15px;
+}
+@media(max-width:768px) {
+   .menu .row:nth-of-type(2) > div:nth-of-type(n-1),
+   .menu .row:nth-of-type(2) > div:last-of-type{
+       padding: 0;
+   }
+   .menu .row:nth-of-type(2){
+       padding: 15px 0;
+   }
+}
+.drop-down-menu{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: $primary-3;
+    left:-500px;
+    top:30px;
+    padding: 40px 0 15px 0;
+    width: 100%;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 4px 1px;
+    z-index: -1;
+    transition: left .5s;
+}
+.drop-down-menu-sm{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: url(../../../img/Bg1.png) $primary-1 center center no-repeat;
+    padding: 40px 0 15px 0;
+    border-radius: 0 0 10px 10px;
+    top: -700px;
+    transition: top .5s;
+    width: 70vw;
+    right: 0;
+    z-index: 3;
+}
+
+#checkbox-sm:checked ~ .drop-down-menu-sm{
+    top: 35px;
+}
+#checkbox:checked ~ .drop-down-menu{
+    left: 10px;
+}
+.drop-down-menu-sm *{
+    justify-content: center;
+    margin-bottom: 10px;
+}
+.relative,
+.menu .row:nth-of-type(2) >div{
+    position: relative;
+}
+
+.header-container{
+position: relative;
+ z-index: 5;
+}
+.triangle-order {
+    max-width: 300px;
+    position: relative;
+    margin: auto;
+    a {
+        display: block;
+        text-transform: uppercase;
+        @include font ($base-light, $font-regular, 26px, 400);
+        background-color: $order-color;
+        padding: 5px 0;
+        text-align: center;
+
+        @media(max-width:991px) {
+            @include font ($base-light, $font-regular, 20px, 400);
+        }
+
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-top: 15px solid $order-color;
+        border-right: 25px solid transparent;
+        position: absolute;
+        left:0;
+        top: 100%;
+    }
+}

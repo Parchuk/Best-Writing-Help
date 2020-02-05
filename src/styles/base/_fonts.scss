@@ -35,6 +35,20 @@
     font-style: normal;
 }
 @font-face {
+    font-family: 'Arial Narrow-bold';
+    src: url('../../fonts/Arial-Narrow.woff2') format('woff2'),
+        url('../../fonts/ArialNarrow-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Arial Narrow-Regular';
+    src: url('../../fonts/ArialNarrowRegular.woff2') format('woff2'),
+        url('../../fonts/ArialNarrowRegular.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
     font-family: 'Rajdhani-Bold';
     src: url('../../fonts/Rajdhani-Bold.woff') format('woff');
     font-weight: 700;

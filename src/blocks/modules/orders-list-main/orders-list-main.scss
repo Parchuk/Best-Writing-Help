@@ -1,0 +1,400 @@
+.orders-list-main{
+    position: relative;
+    background: url(../../../img/Bg_elem1-bottom.png) center 630px no-repeat,url(../../../img/Bg-elem1-top.png) center -150px no-repeat;
+    background-size: cover 100%;
+    .sprite{
+        background-image: url(../../../img/sprite/css_sprites-order-list.png);
+    }
+    .bg-Revision {
+        width: 21px; height: 22px;
+        background-position: -95px -96px;
+    }
+    .bg-feedback {
+        width: 29px; height: 22px;
+        background-position: -55px -10px;
+    }
+    .bg-Additional_order {
+        width: 22px; height: 27px;
+        background-position: -104px -10px;
+    }
+    .bg-Order_details {
+        width: 25px; height: 26px;
+        background-position: -10px -10px;
+    }
+    .bg-Contact_us {
+        width: 23px; height: 22px;
+        background-position: -52px -96px;
+    }
+    .bg-Page {
+        width: 22px; height: 26px;
+        background-position: -10px -96px;
+    }
+    .bg-message {
+        width: 30px; height: 20px;
+        background-position: -10px -56px;
+    }
+    background-color: $primary-6;
+    .table-new-messages{
+        padding-top: 55px;
+        width: 100%;
+        border-spacing: 4px;
+        thead{
+            tr{
+                th{
+                    h3{
+                        padding-left: 15px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        @include font ($primary-7,$font-regular,22px,500)
+                    }
+                    padding: 10px 0;
+                }
+                background-color: $primary-3;
+            }
+        }
+        tbody{
+            tr:nth-of-type(1){
+                @include font ($primary-1,$font-bold-a,20px,700);
+            }
+            tr:nth-of-type(2){
+                td:nth-of-type(3){
+                        span:last-of-type{
+                            @include font ($primary-3,$font-bold-a,20px,700);
+                        }
+                }
+                @include font ($primary-1,$font-normal,20px,500);
+            }
+            tr{
+                td{
+                    margin: 0 auto;
+                    width: 33.33%;
+                    text-align: center;
+                    padding: 13px 0;
+                }
+                background-color: $base-light;
+            }
+        }
+    }
+    .processing-orders{
+        padding-top: 45px;
+        width: 100%;
+        border-spacing: 4px;
+        thead{
+            tr{
+                th{
+                    h3{
+                        padding-left: 15px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        @include font ($primary-7,$font-regular,22px,500)
+                    }
+                    padding: 10px 0;
+                }
+                background-color: $primary-3;
+            }
+        }
+        tbody{
+            tr:nth-of-type(2){
+                td:nth-of-type(2){
+                    color: $primary-3;
+                }
+            }
+            tr:nth-of-type(1){
+                @include font ($primary-1,$font-bold-a,20px,700);
+            }
+            tr:nth-of-type(2){
+                td:nth-of-type(3){
+                        span:last-of-type{
+                            @include font ($primary-3,$font-bold-a,20px,700);
+                        }
+                }
+                @include font ($primary-1,$font-normal,20px,500);
+            }
+            tr{
+                td{
+                    margin: 0 auto;
+                    width: 25%;
+                    text-align: center;
+                    padding: 13px 0;
+                }
+                background-color: $base-light;
+            }
+        }
+    }
+    .completed-orders{
+        padding-top: 25px;
+        width: 100%;
+        border-spacing: 4px;
+        thead{
+            tr{
+                th{
+                    h3{
+                        padding-left: 15px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        @include font ($primary-7,$font-regular,22px,500)
+                    }
+                    padding: 10px 0;
+                }
+                background-color: $primary-3;
+            }
+        }
+        tbody{
+            tr:nth-of-type(2){
+                td:nth-of-type(2){
+                    color: $primary-3;
+                }
+            }
+            tr:nth-of-type(1){
+                @include font ($primary-1,$font-bold-a,20px,700);
+            }
+            tr:nth-of-type(2){
+                td:nth-of-type(3){
+                        span:last-of-type{
+                            @include font ($primary-3,$font-bold-a,20px,700);
+                        }
+                }
+                @include font ($primary-1,$font-normal,20px,500);
+            }
+            tr{
+                td{
+                    i {
+                        color: $primary-3;
+                        &:hover{
+                            color:$a-bg;
+                        }
+                    }
+                    margin: 0 auto;
+                    width: 20%;
+                    text-align: center;
+                    padding: 13px 0;
+                }
+                background-color: $base-light;
+            }
+        }
+    }
+    .processing-orders-2{
+        width: 100%;
+        border-spacing: 4px;
+        tbody{
+            tr:nth-of-type(2){
+                td:nth-of-type(2){
+                    color: $primary-3;
+                }
+            }
+            tr:nth-of-type(1){
+                @include font ($primary-1,$font-bold-a,20px,700);
+            }
+            tr:nth-of-type(2){
+                td:nth-of-type(3){
+                        span:last-of-type{
+                            @include font ($primary-3,$font-bold-a,20px,700);
+                        }
+                }
+                @include font ($primary-1,$font-normal,20px,500);
+            }
+            tr{
+                td{
+                    margin: 0 auto;
+                    width: 20%;
+                    text-align: center;
+                    padding: 13px 0;
+                }
+                background-color: $base-light;
+            }
+        }
+    }
+    .block-icon-1{
+        
+        .sprite,
+        i{
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        li a{
+            @include font ($primary-1,$font-normal,20px,400);
+            padding: 20px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                text-decoration: underline;
+                color:$primary-2;
+            }
+        }
+        li:nth-of-type(6) a{
+            color: $order-color;
+        }
+        li:nth-of-type(6) a,
+        li:nth-of-type(5) a{
+            font-family:$font-bold-a;
+        }
+        li:nth-of-type(5) a{
+            text-transform: uppercase;
+            color:$primary-2;
+        }
+    }
+    .block-icon-2{
+        max-width: 970px;
+        .sprite,
+        i{
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        li a{
+            @include font ($primary-1,$font-normal,20px,400);
+            padding: 20px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                text-decoration: underline;
+                color:$primary-2;
+            }
+        }
+        li:nth-of-type(5) a{
+            font-family:$font-bold-a;
+            text-transform: uppercase;
+            color:$primary-2;
+        }
+    }
+    .block-icon-3{
+        padding-bottom: 70px;
+        .sprite,
+        i{
+            font-size: 24px;
+            margin-right: 10px;
+        }
+        li a{
+            @include font ($primary-1,$font-normal,20px,400);
+            padding: 20px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                text-decoration: underline;
+                color:$primary-2;
+            }
+        }
+       
+    }
+   
+    .icon-button{
+        position: absolute;
+        z-index: 1;
+        top: 20px;
+        right:15px;
+        @media (min-width:576px){
+            top: 1800px;
+        }
+        @media (min-width:768px){
+            top: 1035px;
+        }
+        a{
+            display:block;
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+            background-image: url(../../../img/sprite/sprite_mobille.png);
+            background-color: $primary-3;
+            border: 3px solid #ccc;
+            margin-bottom: 5px;
+            
+        }
+        .icon-1{
+            background-position: -8px -2px;
+        }
+        .icon-2{
+            background-position: -8px -53px;
+        }
+        .icon-3{
+            background-position: -4px -106px;
+            background-color: $primary-1;
+        }
+    }
+                        // mobi
+     @media (max-width:991px){
+        .processing-orders-2,
+        .completed-orders
+        {
+            padding-top:0;
+        }
+        .block-icon-1,
+        .block-icon-2,
+        .block-icon-3{
+             flex-wrap: wrap;
+        li a{
+            @include font ($primary-1,$font-normal,18px,400);
+        }
+        @media (max-width:768px){
+         li   a{
+              padding: 10px;
+          }
+         
+      }
+        }
+    }
+    @media (max-width:768px){
+        .block-icon-3{
+            margin-bottom: 50px;
+        }
+      }
+    .completed-orders-md,
+    .processing-orders-md,
+    .processing-orders-2-md,
+    .table-new-messages-md{
+        padding-top: 30px;
+        width: 100%;
+        border-spacing: 4px;
+        thead{
+            tr{
+                th{
+                    h3{
+                        padding-left: 15px;
+                        text-align: left;
+                        text-transform: uppercase;
+                        @include font ($primary-7,$font-regular,22px,500)
+                    }
+                    padding: 10px 0;
+                }
+                background-color: $primary-3;
+            }
+        }
+        tbody{
+            
+            tr{
+
+                td{
+                    i {
+                        color: $primary-3;
+                        &:hover{
+                            color:$a-bg;
+                        }
+                    }
+                    @include font ($primary-1,$font-normal,20px,400);
+
+                    span:first-of-type{
+                        @include font ($primary-1,$font-bold-a,20px,700);
+
+                    }
+                    text-align: center;
+                    padding: 13px 0;
+                }
+                background-color: $base-light;
+            }
+        }
+    }
+    .table-new-messages-md{
+        tr:nth-of-type(3) span:nth-of-type(3){
+            @include font ($primary-3,$font-bold-a,20px,700);
+        }
+    }
+    .completed-orders-md,
+    .processing-orders-2-md,
+    .processing-orders-md{
+        tr:nth-of-type(2) span:nth-of-type(2){
+            @include font ($primary-3,$font-normal,20px,400);         
+        }
+    }
+    
+}

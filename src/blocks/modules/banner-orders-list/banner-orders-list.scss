@@ -1,0 +1,220 @@
+.banner-order-list{
+    background: url(../../../img/banner.png) center no-repeat;
+    background-size: cover;
+    @media (max-width:767px){
+        background:url(../../../img/bg-mobbile.png) center -150px no-repeat;
+    }
+    .triangle-container-list{
+        filter: drop-shadow(5px 5px 3px lighten($base-dark,70%));
+        h1{
+        line-height: 36px;
+        text-transform: uppercase;
+        @include font ($primary-3,$font-bold,32px,700);
+        background-color: $primary-4;
+        padding: 18px 110px 18px 53px;
+        @media (max-width:768px){
+            @include font ($primary-3,$font-bold,25px,700);
+            line-height: 26px;
+        }
+        @media (max-width:767px){
+            margin-top: 10px;
+        }
+        @media (max-width:422px){
+            padding: 8px 30px 8px 15px;
+        }
+        }
+        .triangle{
+            width: 0; 
+            height: 0;
+            border-top: 25px solid $primary-4;
+            border-right: 35px solid transparent;
+           
+        }
+    }
+    .container-img{
+        padding: 40px 0 30px 35px;
+        img{
+            width: 100%;
+            @media (max-width:991px){
+                width: 70%;
+            }
+            @media (max-width:767px){
+                width: 100%;
+    
+            }
+        }
+    }
+    h3{
+        text-transform: uppercase;
+        @include font ($base-dark,$font-medium,22px,500px);
+        padding-left:50px;
+        
+
+    }
+    ul{
+        margin-bottom: 30px;
+        padding-left: 50px;
+        @media (max-width:422px){
+            padding: 0 0 0 20px;
+        }
+        li::before{
+           content:""; 
+           display: block;
+           width: 10px;
+           height: 10px;
+           border-radius: 50%;
+           background-color:$primary-3;
+           position: absolute;
+           left: -20px;
+           top:11px;
+        }
+        li{
+            @include font ($base-dark,$font-normal,18px,400);
+            line-height: 33px;
+            position: relative;
+            
+        }
+    }
+    
+    
+    .triangle-container-sm{
+        margin-bottom: 15px;
+        filter: drop-shadow(5px 5px 3px lighten($base-dark,70%));
+        h1{
+            white-space: nowrap;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 14.21px;
+            background-color: $primary-4;
+            text-transform: uppercase;
+             @include font ($primary-2,$font-regular,18px,400);
+             padding: 15px 30px 15px 20px;
+             @media (max-width:422px){
+             @include font ($primary-2,$font-regular,16px,400);
+                
+            }
+             span{
+                letter-spacing: -2.31px;
+                @include font ($order-color,$font-bold,34px,700);
+                @media (max-width:422px){
+                @include font ($order-color,$font-bold,30px,700);   
+                   }
+                span{
+                    @include font ($order-color,$font-regular,26px,400);
+                    @media (max-width:422px){
+                    @include font ($order-color,$font-regular,22px,400);
+                     }
+                }
+            }
+           }
+           .triangle{
+            width: 0; 
+            height: 0;
+            border-top: 15px solid $primary-4;
+            border-right: 25px solid transparent;
+        }
+    }
+    .icon-button{
+        position: absolute;
+        z-index: 1;
+        top: 190px;
+        right:15px;
+        span{
+            display:block;
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+            background-image: url(../../../img/sprite/sprite_mobille.png);
+            background-color: $primary-3;
+            border: 3px solid #ccc;
+            margin-bottom: 5px;
+            
+        }
+        .icon-1{
+            background-position: -8px -2px;
+        }
+        .icon-2{
+            background-position: -8px -53px;
+        }
+        .icon-3{
+            background-position: -4px -106px;
+            background-color: $primary-1;
+        }
+    }
+}
+.bg-button{
+    background: url(../../../img/bg-button.png) $primary-2 center no-repeat;
+    background-size: 100% 100%;
+    button{
+        @media(max-width:991px) {
+        @include font ($primary-4,$font-regular,16px,400);
+        }
+        line-height: 42px;
+        @include font ($primary-4,$font-regular,18px,400);
+        border: 1px solid $primary-4;
+        background-color: inherit;
+        padding:0 5px;
+        margin-left: 30px;
+        cursor: pointer;
+        outline: none;
+        @media (max-width:767px){
+            margin-left: 0;
+        }
+        &:hover{
+            box-shadow:0 0 3px 2px #5bb4cc;
+            background-color: $primary-5;
+            color:$base-light;
+        }
+    }
+    button:nth-of-type(-n+2){
+        margin-bottom:15px;
+    }
+    .button:nth-of-type(1) button {
+        margin-top:15px;
+    }
+    
+
+    .container div.button{
+        padding-left: 20px;
+        @media (max-width:767px){
+            padding-left: 0;
+        }
+    }
+    .button{
+        @media (max-width:767px){
+            justify-content: center;
+        }
+    }
+
+    .triangle-order-list {
+        max-width: 300px;
+        position: relative;
+        margin: auto;
+        a {
+            display: block;
+            text-transform: uppercase;
+            @include font ($base-light, $font-regular, 26px, 400);
+            background-color: $order-color;
+            padding: 5px 0;
+            text-align: center;
+
+            @media(max-width:991px) {
+                @include font ($base-light, $font-regular, 20px, 400);
+            }
+
+        }
+
+        .triangle {
+            width: 0;
+            height: 0;
+            border-top: 15px solid $order-color;
+            border-right: 25px solid transparent;
+            position: absolute;
+            left: 15px;
+            top: 100%;
+        }
+    }
+    
+}
+
